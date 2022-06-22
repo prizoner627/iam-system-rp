@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+}
+
+/* fonts */
+@font-face {
+  font-family: "AirbnbCerealBlack";
+  src: url(./assets/fonts/AirbnbCerealBlack.ttf);
+}
+@font-face {
+  font-family: "AirbnbCerealBold";
+  src: url(./assets/fonts/AirbnbCerealBold.ttf);
+}
+
+@font-face {
+  font-family: "AirbnbCerealBook";
+  src: url(./assets/fonts/AirbnbCerealBook.ttf);
+}
+
+@font-face {
+  font-family: "AirbnbCerealExtraBold";
+  src: url(./assets/fonts/AirbnbCerealExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "AirbnbCerealLight";
+  src: url(./assets/fonts/AirbnbCerealLight.ttf);
+}
+
+@font-face {
+  font-family: "AirbnbCerealMedium";
+  src: url(./assets/fonts/AirbnbCerealMedium.ttf);
+}
+
+.MuiChip-label {
+  font-family: "AirbnbCerealLight";
+}
