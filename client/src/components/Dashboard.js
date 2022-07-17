@@ -23,7 +23,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import AppSettingsAltIcon from "@mui/icons-material/AppSettingsAlt";
 import GroupAddIcon from "@mui/icons-material/GroupAdd";
 import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 260;
 
@@ -92,11 +92,10 @@ const Drawer = styled(MuiDrawer, {
   }),
 }));
 
-export default function MiniDrawer({ children }) {
+export default function MiniDrawer({ children, props }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   //   const { currentUser } = useContext(Context);
-  const navigate = useNavigate();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -112,7 +111,7 @@ export default function MiniDrawer({ children }) {
         withCredentials: true,
       });
 
-      navigate("/login");
+      props.history.push("/login");
     } catch (err) {
       console.log(err);
     }

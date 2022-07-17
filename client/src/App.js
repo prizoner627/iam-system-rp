@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import {
   createTheme,
@@ -75,24 +75,22 @@ function App() {
       <ThemeProvider theme={theme}>
         <Provider>
           <BrowserRouter>
-            <Routes>
+            <BrowserRouter>
               {/* 
               <Route exact path="/" component={Landing} /> */}
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              {/* <Route exact path="/" element={<Home />} /> */}
-              <Route path="/admins" element={<Admins />} />
-              <Route path="/users" element={<Users />} />
-              <Route exact path="/" element={<Applications />} />
-              <Route path="/roles" element={<Roles />} />
-              <Route path="/user-register" element={<UserRegister />} />
-              <Route path="/view-logs/" element={<ViewLogs />}>
-                <Route path=":id" element={<ViewLogs />}></Route>
-              </Route>
+              <Route path="/login" component={Login} />
+              <Route path="/register" component={Register} />
+              {/* <Route exact path="/" component={<Home />} /> */}
+              <AuthRoute path="/admins" component={Admins} />
+              <AuthRoute path="/users" component={Users} />
+              <AuthRoute exact path="/" component={Applications} />
+              <AuthRoute path="/roles" component={Roles} />
+              <AuthRoute path="/user-register" component={UserRegister} />
+              <AuthRoute path="/view-logs/:id" component={ViewLogs} />
 
               {/* <AuthRoute path="/profile" component={Profile} /> */}
               {/* <Route component={NotFound} /> */}
-            </Routes>
+            </BrowserRouter>
           </BrowserRouter>
         </Provider>
       </ThemeProvider>
