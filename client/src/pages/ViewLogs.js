@@ -101,7 +101,7 @@ export default function ViewLogs({ props }) {
       let d = {
         employeeId: params.id,
       };
-      const data = await axios.post("http://localhost:5001/get-logs", d, {
+      const data = await axios.post("http://164.92.213.2:5001/get-logs", d, {
         withCredentials: true,
       });
 

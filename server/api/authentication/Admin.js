@@ -115,7 +115,7 @@ async function sendMail(from, to, subject, text) {
     service: "gmail",
     auth: {
       user: "ebooksystemresearch@gmail.com",
-      pass: "R3seach@3book#",
+      pass: "egvljabnjjonwqfi",
     },
   });
 
@@ -259,7 +259,7 @@ exports.Login = async (req, res) => {
     let from = "ebooksystemresearch@gmail.com";
     let to = user.email;
     let subject = "account conformations";
-    let text = `User created successfully, Please verify your account using the link sent to your mentioned email address http://localhost:5001/verify-token?token=${encryptedData}`;
+    let text = `User created successfully, Please verify your account using the link sent to your mentioned email address http://164.92.213.2:5001/verify-token?token=${encryptedData}`;
 
     const mail = await sendMail(from, to, subject, text);
 
@@ -275,7 +275,7 @@ exports.Login = async (req, res) => {
     return res.status(201).json({
       status: "201",
       message: "User verified successfully, please check your email.",
-      // data: `http://localhost:5001/verify-token?token=${encryptedData}`,
+      // data: `http://164.92.213.2:5001/verify-token?token=${encryptedData}`,
     });
   } catch (err) {
     console.log(err);

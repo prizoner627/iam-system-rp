@@ -75,7 +75,7 @@ export default function UserRegister(props) {
       };
 
       const response = await axios.post(
-        "http://localhost:5001/user-register",
+        "http://164.92.213.2:5001/user-register",
         data
       );
 

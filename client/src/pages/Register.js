@@ -90,7 +90,7 @@ export default function Register(props) {
       };
 
       const response = await axios.post(
-        "http://localhost:5001/admin-register",
+        "http://164.92.213.2:5001/admin-register",
         data
       );
 

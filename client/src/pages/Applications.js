@@ -122,7 +122,7 @@ export default function Applications() {
       };
 
       const data = await axios.post(
-        "http://localhost:5001/delete-application",
+        "http://164.92.213.2:5001/delete-application",
         postData,
         { withCredentials: true }
       );
@@ -138,9 +138,12 @@ export default function Applications() {
     setLoading(true);
 
     try {
-      const data = await axios.get("http://localhost:5001/get-applications", {
-        withCredentials: true,
-      });
+      const data = await axios.get(
+        "http://164.92.213.2:5001/get-applications",
+        {
+          withCredentials: true,
+        }
+      );
 
       setApplications(data?.data?.data);
       console.log(data?.data?.data);

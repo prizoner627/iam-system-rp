@@ -69,7 +69,7 @@ export default function Login(props) {
       };
 
       const response = await axios.post(
-        "http://localhost:5001/admin-login",
+        "http://164.92.213.2:5001/admin-login",
         data
       );
 

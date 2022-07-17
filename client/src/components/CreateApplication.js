@@ -63,7 +63,7 @@ export default function MaxWidthDialog() {
       };
 
       const data1 = await axios.post(
-        "http://localhost:5001/create-application",
+        "http://164.92.213.2:5001/create-application",
         postData
       );
 
@@ -82,7 +82,7 @@ export default function MaxWidthDialog() {
     setLoading(true);
 
     try {
-      const data = await axios.get("http://localhost:5001/get-roles", {
+      const data = await axios.get("http://164.92.213.2:5001/get-roles", {
         withCredentials: true,
       });
 
@@ -199,7 +199,7 @@ export default function MaxWidthDialog() {
                     id="url"
                     name="url"
                     type="text"
-                    placeholder="http://localhost:3000"
+                    placeholder="http://164.92.213.2:3000"
                     color="primary"
                     variant="outlined"
                     size="small"

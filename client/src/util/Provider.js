@@ -14,7 +14,7 @@ export const Provider = ({ children }) => {
   useEffect(() => {
     console.log("context");
     axios
-      .get("http://localhost:5001/authenticated", {
+      .get("http://164.92.213.2:5001/authenticated", {
         withCredentials: true,
       })
       .then((response) => {

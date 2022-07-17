@@ -124,7 +124,7 @@ export default function Roles() {
       };
 
       const data = await axios.post(
-        "http://localhost:5001/delete-admin",
+        "http://164.92.213.2:5001/delete-admin",
         postData,
         { withCredentials: true }
       );
@@ -140,7 +140,7 @@ export default function Roles() {
     setLoading(true);
 
     try {
-      const data = await axios.get("http://localhost:5001/get-roles", {
+      const data = await axios.get("http://164.92.213.2:5001/get-roles", {
         withCredentials: true,
       });
 

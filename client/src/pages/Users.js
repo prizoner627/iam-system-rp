@@ -112,7 +112,7 @@ export default function Users() {
       };
 
       const data = await axios.post(
-        `http://localhost:5001/verify-admin`,
+        `http://164.92.213.2:5001/verify-admin`,
         postData
       );
 
@@ -132,7 +132,7 @@ export default function Users() {
       };
 
       const data = await axios.post(
-        "http://localhost:5001/delete-admin",
+        "http://164.92.213.2:5001/delete-admin",
         postData,
         { credentials: true }
       );
@@ -148,7 +148,7 @@ export default function Users() {
     setLoading(true);
 
     try {
-      const data = await axios.get("http://localhost:5001/get-users", {
+      const data = await axios.get("http://164.92.213.2:5001/get-users", {
         withCredentials: true,
       });
 

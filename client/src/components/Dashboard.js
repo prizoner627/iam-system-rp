@@ -108,7 +108,7 @@ export default function MiniDrawer({ children }) {
 
   const logout = async () => {
     try {
-      const data = await axios.get(`http://localhost:5001/logout`, {
+      const data = await axios.get(`http://164.92.213.2:5001/logout`, {
         withCredentials: true,
       });
 
